@@ -69,3 +69,46 @@ main {
     color: #fff;
     text-decoration: none;
 }
+
+/* Existing CSS remains unchanged */
+
+.intro {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end; /* Align button group to the right */
+}
+
+.button-group {
+    margin-left: auto; /* Move button group to the right */
+}
+
+.button {
+    margin-left: 10px;
+}
+
+.about {
+    background-color: #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Align content to the center horizontally */
+}
+
+.about-info {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.profile-photo {
+    max-width: 150px; /* Adjust photo size */
+    height: auto;
+    margin-right: 20px; /* Add some space between photo and text box */
+}
+
+.text-box {
+    max-width: 300px; /* Set maximum width for text box */
+}
+
+.contact-links {
+    /* Existing CSS remains unchanged */
+}
