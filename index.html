@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vallabh Deogaonkar</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Researcher</p>
+            <h1>Hi, I'm <span>Kevin</span><br>Jen From Australia</h1>
+        </div>
+    </div>
+</div> -->
 <div id="header">
     <div class="container">
         <nav>
@@ -24,8 +44,8 @@
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>UI/UX Designer</p>
-            <h1>Hi, I'm <span>Kevin</span><br>Jen From Australia</h1>
+            <p id="dynamicText">Researcher.</p> <!-- Added period here -->
+            <h1 class="header-title">Hi, I'm <span>Vallabh</span><br>IITM . Chennai . India</h1> <!-- Removed inline styles -->
         </div>
     </div>
 </div>
@@ -38,7 +58,19 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis, elementum molestie tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eleifend magna id ante convallis mattis. Quisque in sem tristique, dictum sapien et, accumsan libero.</p>
+                <p class="about-description">
+                    I'm currently pursuing my doctoral studies at Indian Institute of Technology Madras.<br>
+                    I'm interested in interdisciplinary concepts from Physics, Machine Learning, and Robotics such as:
+                </p>
+                <p class="about-description" style="margin-left: 20px;"> <!-- Adjust the margin as needed -->
+                    • Physics Informed Machine Learning for Engineering Applications<br>
+                    • Autonomous Marine Vehicles Control and Path Planning<br>
+                    • System Identification of Nonlinear Systems<br>
+                    • Reinforcement Learning
+                </p>
+                <p class="about-description">
+                    I constantly seek opportunities to push the boundaries of my knowledge in these domains.
+                </p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -162,7 +194,47 @@
     </div>
 </div>
 
+<script>
+    const words = ["Researcher", "Roboticist", "Mathysicist", "Ocean Engineer"];
+    let currentIndex = 0;
+    let charIndex = 0;
+    let typingSpeed = 100; // speed of typing in milliseconds
+    let deletingSpeed = 50; // speed of deleting in milliseconds
+    let delayBetweenWords = 1000; // delay before starting to delete
 
+    function typeWord() {
+        const textElement = document.getElementById("dynamicText");
+        const currentWord = words[currentIndex];
+
+        if (charIndex < currentWord.length) {
+            // Update text content excluding the period
+            textElement.textContent = currentWord.substring(0, charIndex + 1) + '.'; // Always add the period at the end
+            charIndex++;
+            setTimeout(typeWord, typingSpeed);
+        } else {
+            setTimeout(deleteWord, delayBetweenWords); // start deleting after delay
+        }
+    }
+
+    function deleteWord() {
+        const textElement = document.getElementById("dynamicText");
+        const currentWord = words[currentIndex];
+
+        if (charIndex > 0) {
+            // Update text content excluding the period
+            textElement.textContent = currentWord.substring(0, charIndex - 1) + '.'; // Always add the period at the end
+            charIndex--;
+            setTimeout(deleteWord, deletingSpeed);
+        } else {
+            currentIndex = (currentIndex + 1) % words.length;
+            charIndex = 0; // Reset charIndex for the next word
+            setTimeout(typeWord, typingSpeed); // start typing the next word
+        }
+    }
+
+    // Start the typing effect when the page loads
+    typeWord();
+</script>
 
 <script>
 
