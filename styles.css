@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
+    background: #000000;
     color: #fff;
 }
 #header{
@@ -21,6 +21,16 @@ body{
 }
 .container{
     padding: 10px 10%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 1000; /* Ensures the nav is on top of other elements */
+    background-color: #000000; /* Optional: Background color for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow for depth */
+    height: 80px;
 }
 
 #dynamicText {
@@ -39,6 +49,16 @@ body{
     font-family: 'Lucida Sans Unicode', sans-serif; /* You can change this to any desired font */
     font-size: 2rem; /* Adjust the font size as needed */
     color: #ffffff; /* Customize the text color */
+}
+
+.header-title .header-subtitle {
+    font-size: 1.8rem; /* smaller size for the subtitle */
+    font-weight: 400; /* adjust weight if you want it lighter */
+    color: #ffffff; /* optional: change color for contrast */
+    line-height: 1.5; /* Set a desired line height */
+    margin-top: 5px; /* Adjust top margin to add space above */
+    margin-bottom: 5px; /* Adjust bottom margin to add space below */
+    padding: 0; /* Reset any padding */
 }
 
 .tab-titles .tab-links {
@@ -121,6 +141,13 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
+.tab-contents ul li {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    line-height: 1.2; /* Optional: adjust line height for spacing */
+    list-style: none;
+    margin: 20px 0;
+}
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -147,13 +174,13 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
-.tab-contents ul li{
+/* .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
-}
+} */
 .tab-contents ul li span{
     color: #b54769;
-    font-size: 14px;
+    font-size: 20px;
 }
 .tab-contents{
     display: none;

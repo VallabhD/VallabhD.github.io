@@ -31,7 +31,7 @@
 </div> -->
 <div id="header">
     <div class="container">
-        <nav>
+        <nav class="navbar">
             <img src="images/logo.png" class="logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
@@ -45,7 +45,10 @@
         </nav>
         <div class="header-text">
             <p id="dynamicText">Researcher.</p> <!-- Added period here -->
-            <h1 class="header-title">Hi, I'm <span>Vallabh</span><br>IITM . Chennai . India</h1> <!-- Removed inline styles -->
+            <h1 class="header-title">Hi, I'm <span>Vallabh</span><br>
+                <p class="header-subtitle">Seeking nature's truths, sharing insights,</p>
+                <p class="header-subtitle">and celebrating the beauty of human creativity</p>
+            </h1>
         </div>
     </div>
 </div>
@@ -73,18 +76,18 @@
                 </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('publications')">Publications</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
+                <div class="tab-contents" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                         <li><span>Web Development</span><br>Web app Development</li>
                         <li><span>App Development</span><br>Building Android/iOS apps</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="experience">
+                <div class="tab-contents" id="publications">
                     <ul>
                         <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
                         <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
@@ -92,11 +95,10 @@
                         <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="education">
+                <div class="tab-contents active-tab" id="education">
                     <ul>
-                        <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                        <li><span>2016</span><br>MBA from MIT Bangalore.</li>
-                        <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                        <li><span>2023 - Current</span><br>Doctor of Philosophy - Ocean Engineering<br>Indian Institute of Technology Madras</li>
+                        <li><span>2018 - 2023</span><br>Dual Degree (B.Tech + M.Tech)<br>B.Tech in Naval Architecture and Ocean Engineering<br>Integrated M.Tech in Robotics</li>
                     </ul>
                 </div>
             </div>
